@@ -5,6 +5,8 @@ import Hospitals from './Hospitals.jsx';
 import RiversideHospital from './RiversideHospital.jsx';
 import AboutUs from './AboutUs.jsx';
 import HowItWorks from './HowitWorks.jsx'; // 1. Import HowItWorks
+import HospitalDashboard from './Admin/HospitalDashboard.jsx';
+import AddDoctor from './Admin/AddDoctor.jsx';
 
 export default function App() {
   return (
@@ -14,6 +16,11 @@ export default function App() {
       <Route path="/hospitals/riverside" element={<RiversideHospital />} /> {/* 2. Add route */}
       <Route path="/about" element={<AboutUs />} /> {/* 2. Add the /about route */}
       <Route path="/how-it-works" element={<HowItWorks />} /> {/* 2. Add Route */}
+
+
+      {/* Admin Dashboard Route */}
+    <Route path="/admin/doctors" element={<HospitalDashboard />} />
+    <Route path="/admin/doctors/add" element={<AddDoctor />} />
     </Routes>
   );
 }
